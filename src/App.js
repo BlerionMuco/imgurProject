@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getPosts } from './redux/slice';
+import GridImages from './Components/GridImages'
+import NoImage from './Components/NoImage';
+import FilterImages from './Components/FilterImages'
 
 function App() {
+
+  const dispatch = useDispatch()
+  const loading = useSelector(state => state.posts.postsLoading)
+
+  useEffect(() => {
+    dispatch(getPosts({}));
+  }, [dispatch])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <FilterImages />
+      {!loading ? <GridImages /> : <NoImage />}
     </div>
   );
 }
