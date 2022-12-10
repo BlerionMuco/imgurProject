@@ -6,11 +6,17 @@ const PostDataComponent = ({ post }) => {
 
     return (
         <div>
-            {data.map((d) => (
-                <Typography id="modal-modal-title" variant="h6" component="h2">
-                    {d} : {post[d]}
-                </Typography>
-            ))}
+            {data.map((d) => {
+                return (
+                    <div>
+                        {post[d] && <Typography id="modal-modal-title" variant="h6" component="h2">
+                            {d.charAt(0).toUpperCase() + d.slice(1)} : {post[d]}
+                        </Typography>
+                        }
+                    </div>
+
+                )
+            })}
         </div>
     )
 }
