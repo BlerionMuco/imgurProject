@@ -12,7 +12,7 @@ export const getPosts = createAsyncThunk(
     "posts/fetchbyUrl",
     async ({ section = "hot", mature = false, viral = false, sort = "viral", window = "all" }) => {
         var myHeaders = new Headers();
-        myHeaders.append("Authorization", "Bearer " + process.env.REACT_APP_IMGUR_TOKEN);
+        myHeaders.append("Authorization", "Bearer 3df7b4400233ada1e6459097fddeb48dac91641e");
 
         const requestOptions = {
             method: 'GET',

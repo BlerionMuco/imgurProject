@@ -1,11 +1,12 @@
 import React from 'react'
 import Typography from '@mui/material/Typography';
+import '../style/VideoComponent.css'
 
 const VideoComponent = ({ post }) => {
     return (
         <Typography id="modal-modal-title" variant="h6" component="h2">
             <video
-                style={{ width: "270px", borderRadius: "10px" }}
+                className='video__format'
                 autoPlay
                 loop
                 muted

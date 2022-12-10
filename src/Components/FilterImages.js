@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { getPosts } from '../redux/slice';
 import { Button } from '@mui/material';
 import Grid from '@mui/material/Grid';
+import '../style/FilterImage.css'
 
 const FilterImages = () => {
     const [state, setState] = useState({ section: "hot", window: "day", viral: false, mature: false, sort: "viral" })
@@ -74,7 +75,7 @@ const FilterImages = () => {
     ]
 
     return (
-        <Grid container spacing={2} sx={{ m: "auto", p: "5px 5px 5px 5px" }}>
+        <Grid container spacing={2} className="filterImage__container">
             {fields &&
                 fields.map((field, index) => {
                     return (
@@ -82,7 +83,7 @@ const FilterImages = () => {
                     )
                 })
             }
-            <Grid item xs={12} sx={{ display: "flex", justifyContent: "end", marginRight: "22px" }}>
+            <Grid item xs={12} >
                 <Button color="primary" onClick={onClick} variant="contained">Search</Button>
             </Grid>
         </Grid>

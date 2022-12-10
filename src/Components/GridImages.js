@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { postOnModal } from "../redux/slice";
 import ImageComponent from "./ImageComponent";
 import VideoComponent from "./VideoComponent";
+import '../style/GridImage.css'
 
 const TitlebarImageList = () => {
   const posts = useSelector((state) => state.posts.posts.data);
@@ -26,7 +27,7 @@ const TitlebarImageList = () => {
 
   return (
     <Box>
-      <ImageList xs={{ padding: "50px" }} cols={3}>
+      <ImageList className="gridImage__listItem" cols={3}>
         {posts &&
           posts.map((post, index) => {
             return (
@@ -34,7 +35,7 @@ const TitlebarImageList = () => {
                 onClick={() => {
                   handleOpen(post);
                 }}
-                sx={{ margin: "8px" }}
+                className="gridImage__imageListItem"
                 key={index}
               >
                 {post.images && post.mp4 === undefined ? (
@@ -43,12 +44,12 @@ const TitlebarImageList = () => {
                   <VideoComponent post={post} />
                 )}
                 <ImageListItemBar
-                  sx={{ borderRadius: "10px" }}
+                  className="gridImage__imageListItemBar"
                   title={post.title}
                   subtitle={post.author}
                   actionIcon={
                     <IconButton
-                      sx={{ color: "rgba(255, 255, 255, 0.54)" }}
+                      className="gridImage__iconButton"
                       aria-label={`info about ${post.title}`}
                     >
                       <InfoIcon />

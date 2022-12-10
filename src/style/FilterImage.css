@@ -1,0 +1,10 @@
+.filterImage__container {
+  margin: auto;
+  padding: 10px;
+}
+
+.filterImage__button {
+  display: flex;
+  justify-content: end;
+  margin-right: 22px;
+}
