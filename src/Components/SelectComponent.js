@@ -22,6 +22,21 @@ export const SelectComponent = React.memo(({ label, menuItems, value, funx, type
                         onChange={funx}
                         name={name}
                         size="small"
+                        sx={{
+                            color: "white",
+                            '.MuiOutlinedInput-notchedOutline': {
+                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                            },
+                            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                            },
+                            '&:hover .MuiOutlinedInput-notchedOutline': {
+                                borderColor: 'rgba(228, 219, 233, 0.25)',
+                            },
+                            '.MuiSvgIcon-root ': {
+                                fill: "white !important",
+                            }
+                        }}
                     >
                         {menuItems && menuItems.map((menuItem, index) => (
                             <MenuItem key={index} value={menuItem.value}>{menuItem.label}</MenuItem>

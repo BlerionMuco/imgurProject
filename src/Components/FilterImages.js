@@ -84,7 +84,7 @@ const FilterImages = () => {
                 })
             }
             <Grid item xs={12} >
-                <Button color="primary" onClick={onClick} variant="contained">Search</Button>
+                <Button color="primary" onClick={onClick} variant="contained">Filter</Button>
             </Grid>
         </Grid>
     )
