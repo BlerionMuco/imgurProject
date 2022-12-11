@@ -2,9 +2,9 @@ import './App.css';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getPosts } from './redux/slice';
-import GridImages from './Components/GridImages'
-import NoImage from './Components/NoImage';
-import FilterImages from './Components/FilterImages'
+import GridImages from './Components/GridImagesComponent'
+import NoImage from './Components/NoImageComponent';
+import FilterImages from './Components/FilterImagesComponent'
 
 function App() {
 
