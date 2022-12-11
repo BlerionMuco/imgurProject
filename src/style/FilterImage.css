@@ -4,7 +4,7 @@
 }
 
 .filterImage__button {
-  position: fixed;
+  position: fixed !important;
   left: 30%;
   width: 40%;
   z-index: 1;
