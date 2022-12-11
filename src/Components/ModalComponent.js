@@ -18,7 +18,7 @@ export const ModalComponent = ({ onClose, open }) => {
                 aria-describedby="modal-modal-description"
             >
                 <Box className='modal'>
-                    {post.images && post.mp4 === undefined ? (
+                    {post.images[0].link.slice(-3) !== "mp4" ? (
                         <ImageComponent post={post} />
                     ) : (
                         <VideoComponent post={post} />

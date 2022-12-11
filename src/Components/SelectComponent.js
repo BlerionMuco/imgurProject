@@ -9,7 +9,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 
 export const SelectComponent = React.memo(({ label, menuItems, value, funx, type, name }) => {
     return (
-        <Grid item xs={6} md={3} sx={{ p: "5px 15px 5px 5px" }}>
+        <Grid item xs={12} md={12} sx={{ p: "15px" }}>
             {type === "select"
                 ?
                 <FormControl fullWidth size="small">
@@ -48,6 +48,7 @@ export const SelectComponent = React.memo(({ label, menuItems, value, funx, type
                     size="small"
                     control={<Switch size="small" value={value} onChange={funx} name={name} />}
                     label={label}
+                    name={name}
                 />
             }
         </Grid>

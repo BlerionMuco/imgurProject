@@ -10,7 +10,7 @@ describe('The image component', () => {
             images: [{ link: "https://i.imgur.com/72DOd72.jpg" }, { link: "https://i.imgur.com/72DOd72.jpg" }],
             title: "Test by Jest"
         }
-        console.log("efjskjfhkj", post.images, post.title);
+
         render(<ImageComponent post={post} />)
         const testImage = document.querySelector("img");
         expect(testImage.alt).toContain("Test by Jest");

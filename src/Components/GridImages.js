@@ -31,32 +31,39 @@ const TitlebarImageList = () => {
         {posts &&
           posts.map((post, index) => {
             return (
-              <ImageListItem
-                onClick={() => {
-                  handleOpen(post);
-                }}
-                className="gridImage__imageListItem"
-                key={index}
-              >
-                {post.images && post.mp4 === undefined ? (
-                  <ImageComponent post={post} />
-                ) : (
-                  <VideoComponent post={post} />
-                )}
-                <ImageListItemBar
-                  className="gridImage__imageListItemBar"
-                  title={post.title}
-                  subtitle={post.author}
-                  actionIcon={
-                    <IconButton
-                      className="gridImage__iconButton"
-                      aria-label={`info about ${post.title}`}
-                    >
-                      <InfoIcon />
-                    </IconButton>
+              <>
+                {post.link && post.images && <ImageListItem
+                  onClick={() => {
+                    handleOpen(post);
+                  }}
+                  className="gridImage__imageListItem"
+                  key={index}
+                >
+                  {post.link && post.images && <div>
+                    {post.images[0].link.slice(-3) !== "mp4" ? (
+                      <ImageComponent post={post} />
+                    ) : (
+                      <VideoComponent post={post} />
+                    )}
+                    <ImageListItemBar
+                      className="gridImage__imageListItemBar"
+                      title={post.title}
+                      subtitle={post.author}
+                      actionIcon={
+                        <IconButton
+                          className="gridImage__iconButton"
+                          aria-label={`info about ${post.title}`}
+                        >
+                          <InfoIcon />
+                        </IconButton>
+                      }
+                    />
+                  </div>
                   }
-                />
-              </ImageListItem>
+                </ImageListItem>}
+              </>
+
+
             );
           })}
       </ImageList>

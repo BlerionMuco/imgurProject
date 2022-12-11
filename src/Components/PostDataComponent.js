@@ -14,7 +14,6 @@ const PostDataComponent = ({ post }) => {
                         </Typography>
                         }
                     </div>
-
                 )
             })}
         </div>

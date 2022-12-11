@@ -13,7 +13,7 @@ const VideoComponent = ({ post }) => {
                 poster={post.mp4}
             >
                 <source
-                    src={post.mp4}
+                    src={post.images[0].link}
                     type="video/mp4"
                 />
             </video>

@@ -4,7 +4,8 @@
 }
 
 .filterImage__button {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 22px;
+  position: fixed;
+  left: 30%;
+  width: 40%;
+  z-index: 1;
 }
