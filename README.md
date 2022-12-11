@@ -72,4 +72,10 @@ One example i have implemented on FilterImageComponent i have use UseRef to take
 div and after some calucate to find where is the user on the page.
 If he has reached the bottom that is the first condition here will be fire another function that
 dispatch the getPosts with page number different
-And another thing to do is [...firstPosts, ...NewPosts]
+And another thing to do is [...firstPosts, ...NewPosts] to keep the post we already have uploaded
+on front end andthen the new posts that will come from paganation
+
+Hope that all of this to be clear but for more further questions let me know on the gmail.
+
+Take care.
+Blerion
